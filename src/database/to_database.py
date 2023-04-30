@@ -2,10 +2,10 @@ import pandas as pd
 
 from sqlalchemy import create_engine
 
-engine = create_engine('postgresql://postgres:postgres@localhost:5432/postgres')
+engine = create_engine('postgresql://postgres:postgres@localhost:5432/optuna')
 
-train = pd.read_csv("train.csv")
-test = pd.read_csv("test.csv")
+train = pd.read_csv("prefect-tutorial/src/database/train.csv")
+test = pd.read_csv("prefect-tutorial/src/database/test.csv")
 
 test['transaction_real_price'] = None
 
